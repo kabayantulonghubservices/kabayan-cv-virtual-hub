@@ -20,6 +20,9 @@
     .brand small{display:block;font-weight:600;color:var(--muted);font-size:11px;margin-top:4px}
     .navlinks{display:flex;gap:20px;align-items:center}
     .navlinks a{text-decoration:none;font-weight:700;font-size:14px;color:var(--navy)}
+    .navlinks a.nav-quote{display:inline-flex;background:#102b4e!important;color:#ffffff!important;border:2px solid #102b4e!important;padding:13px 20px;min-width:156px;min-height:46px;align-items:center;justify-content:center;font-size:15px;font-weight:800;line-height:1.35;text-align:center;text-decoration:none;text-shadow:none;opacity:1;visibility:visible}
+    .navlinks a.nav-quote:hover{background:#173c68!important;color:#ffffff!important}
+    .navlinks a.nav-quote:focus-visible{outline:3px solid #7fb3ef;outline-offset:3px}
     .btn{display:inline-flex;align-items:center;justify-content:center;background:var(--navy);color:#fff;text-decoration:none;padding:13px 20px;border-radius:9px;font-weight:800;font-size:15px;line-height:1.35;border:2px solid var(--navy);cursor:pointer;text-align:center;min-height:46px;box-shadow:0 2px 5px #07182c18}
     .btn:hover{background:var(--navy2);color:#fff}.btn:focus-visible{outline:3px solid #7fb3ef;outline-offset:3px}
     .btn.outline{background:transparent;color:var(--navy)}
@@ -75,7 +78,7 @@
     .foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:13px}
     .foot a{color:#fff}
     @media(max-width:800px){.hero-grid,.booking-grid{grid-template-columns:1fr}.preview{max-width:430px}.cards{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.navlinks a:not(.btn){display:none}}
-    @media(max-width:480px){.hero{padding:52px 0}.steps,.form-grid{grid-template-columns:1fr}.full{grid-column:auto}section{padding:48px 0}.navlinks .btn{padding:10px 12px;font-size:13px;min-height:42px}.brand{font-size:13px}.logo{width:37px;height:37px}}
+    @media(max-width:480px){.hero{padding:52px 0}.steps,.form-grid{grid-template-columns:1fr}.full{grid-column:auto}section{padding:48px 0}.navlinks .btn{padding:10px 12px;font-size:13px;min-height:42px}.navlinks a.nav-quote{min-width:130px;padding:10px 12px;font-size:13px}.brand{font-size:13px}.logo{width:37px;height:37px}}
   </style>
 </head>
 <body>
@@ -86,7 +89,7 @@
       <span>Kabayan CV Virtual Hub Services<small>Resume Creation & Editing</small></span>
     </a>
     <nav class="navlinks" aria-label="Main navigation">
-      <a href="#services">Services</a><a href="#how">How it works</a><a class="btn" href="#booking">Request a Quote</a>
+      <a href="#services">Services</a><a href="#how">How it works</a><a class="btn nav-quote" href="#booking">Request a Quote</a>
     </nav>
   </div>
 </header>
@@ -98,7 +101,7 @@
         <h1>A Better Resume for Your Next Opportunity.</h1>
         <p>Professional resume creation and editing for Filipinos around the world. Present your experience, skills, and qualifications clearly—whether you are applying online or in person.</p>
         <div class="hero-actions">
-          <a class="btn" href="#booking">Request a Quote</a>
+          <a class="btn nav-quote" href="#booking">Request a Quote</a>
           <a class="btn outline" href="https://wa.me/971562620627" target="_blank" rel="noopener">Chat on WhatsApp</a>
         </div>
         <p class="note">ATS-friendly resume options · Europass-style designs · Resume updates</p>
