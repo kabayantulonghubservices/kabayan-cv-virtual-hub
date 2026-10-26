@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -214,6 +215,21 @@
     const message = encodeURIComponent(lines.join('\n'));
     document.getElementById('formAlert').style.display = 'block';
     document.getElementById('formAlert').textContent = 'Opening WhatsApp with your quote request. Please review the message and press Send in WhatsApp to submit it.';
+const orderData = new URLSearchParams({
+  name: document.getElementById('name').value.trim(),
+  contact: document.getElementById('contact').value.trim(),
+  country: document.getElementById('country').value,
+  service: document.getElementById('service').value,
+  deadline: document.getElementById('deadline').value,
+  format: document.getElementById('format').value,
+  details: document.getElementById('details').value.trim()
+});
+
+fetch('https://script.google.com/macros/s/AKfycbzd-cdd0qFUWVqXfJ9KH15dby604yPzBg3UAjkn_LtEhjGt3tnxyyGqxHYaHuQZwk8Ydg/exec', {
+  method: 'POST',
+  mode: 'no-cors',
+  body: orderData
+}).catch(error => console.error('Order submission failed:', error));
     window.open('https://wa.me/971562620627?text=' + message, '_blank', 'noopener');
   });
 </script>
