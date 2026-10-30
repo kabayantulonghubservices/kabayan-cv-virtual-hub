@@ -17,7 +17,7 @@
     header{background:var(--white);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
     .nav{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:14px 0}
     .brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:800;color:var(--navy);line-height:1.2}
-    .logo{width:42px;height:42px;border-radius:10px;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:14px;letter-spacing:.5px}
+    .brand-logo{width:48px;height:48px;object-fit:contain;border-radius:10px;flex:0 0 auto}
     .brand small{display:block;font-weight:600;color:var(--muted);font-size:11px;margin-top:4px}
     .navlinks{display:flex;gap:20px;align-items:center}
     .navlinks a{text-decoration:none;font-weight:700;font-size:14px;color:var(--navy)}
@@ -27,7 +27,7 @@
     .btn{display:inline-flex;align-items:center;justify-content:center;background:var(--navy);color:#fff;text-decoration:none;padding:13px 20px;border-radius:9px;font-weight:800;font-size:15px;line-height:1.35;border:2px solid var(--navy);cursor:pointer;text-align:center;min-height:46px;box-shadow:0 2px 5px #07182c18}
     .btn:hover{background:var(--navy2);color:#fff}.btn:focus-visible{outline:3px solid #7fb3ef;outline-offset:3px}
     .btn.outline{background:transparent;color:var(--navy)}
-    .hero{background:linear-gradient(125deg,var(--navy),#1b4776);color:white;padding:76px 0 70px}
+    .hero{background:linear-gradient(125deg,var(--navy),#1b4776);color:white;padding:42px 0 70px}.hero-banner{display:block;width:100%;max-height:260px;object-fit:cover;border-radius:16px;margin:0 auto 38px;box-shadow:0 12px 30px #07182c44}.promo-image{display:block;width:min(100%,900px);height:auto;object-fit:contain;margin:0 auto 34px;border-radius:14px}
     .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:42px;align-items:center}
     .eyebrow{text-transform:uppercase;letter-spacing:1.7px;font-weight:800;font-size:12px;color:#c8ddf3}
     h1{font-size:clamp(34px,5vw,54px);line-height:1.1;margin:14px 0 18px;letter-spacing:-1px}
@@ -79,14 +79,14 @@
     .foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:13px}
     .foot a{color:#fff}
     @media(max-width:800px){.hero-grid,.booking-grid{grid-template-columns:1fr}.preview{max-width:430px}.cards{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.navlinks a:not(.btn){display:none}}
-    @media(max-width:480px){.hero{padding:52px 0}.steps,.form-grid{grid-template-columns:1fr}.full{grid-column:auto}section{padding:48px 0}.navlinks .btn{padding:10px 12px;font-size:13px;min-height:42px}.navlinks a.nav-quote{min-width:130px;padding:10px 12px;font-size:13px}.brand{font-size:13px}.logo{width:37px;height:37px}}
+    @media(max-width:480px){.hero{padding:52px 0}.steps,.form-grid{grid-template-columns:1fr}.full{grid-column:auto}section{padding:48px 0}.navlinks .btn{padding:10px 12px;font-size:13px;min-height:42px}.navlinks a.nav-quote{min-width:130px;padding:10px 12px;font-size:13px}.brand{font-size:13px}.brand-logo{width:40px;height:40px}}
   </style>
 </head>
 <body>
 <header>
   <div class="wrap nav">
     <a class="brand" href="#home" aria-label="Kabayan CV Virtual Hub Services home">
-      <span class="logo">KCVH</span>
+      <img class="brand-logo" src="kabayan-logo.jpg" alt="Kabayan CV Virtual Hub Services logo">
       <span>Kabayan CV Virtual Hub Services<small>Resume Creation & Editing</small></span>
     </a>
     <nav class="navlinks" aria-label="Main navigation">
@@ -120,7 +120,7 @@
   <section id="services">
     <div class="wrap">
       <div class="section-head"><h2>Resume Services</h2><p>Choose the service that best fits your job application. Message us for a quote based on your requirements.</p></div>
-      <div class="cards">
+      <img class="promo-image" src="ChatGPT%20Image%20Oct%2030,%202026,%2007_44_03%20AM.png" alt="Kabayan CV Virtual Hub Services promotional graphic">\n      <div class="cards">
         <article class="card"><div class="icon">ATS</div><h3>ATS-Friendly Resume</h3><p>A clear, structured resume designed for online applications and easier parsing by applicant tracking systems. No interview or job outcome is guaranteed.</p></article>
         <article class="card"><div class="icon">EU</div><h3>Europass-Style Resume</h3><p>A professional, visually structured resume layout, with photo option when requested and appropriate for your application.</p></article>
         <article class="card"><div class="icon">✎</div><h3>Resume Update & Editing</h3><p>Improve the presentation of your existing resume, organize work experience, and format skills and qualifications clearly.</p></article>
